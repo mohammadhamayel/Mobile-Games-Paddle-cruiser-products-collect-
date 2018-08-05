@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painter</title>
+    <link rel="stylesheet" type="text/css" href="game-layout.css"/>
+    <script src="../LAB.min.js"></script>
+    <script>
+
+        $LAB
+                .script('input/Keyboard.js').wait()
+                .script('input/Mouse.js').wait()
+                .script('Canvas2D.js').wait()
+                .script('system/Keys.js').wait()
+                .script('Game.js').wait()
+                .script('Painter.js').wait()
+                .script('Ball.js').wait()
+                .script('Paddle.js').wait()                
+                .script('Gift.js').wait()
+                .script('PainterGameWorld.js').wait(function () {
+                    Game.start('mycanvas', 800, 480);
+                });
+
+    </script>
+</head>
+
+<body >
+<div id="gameArea" >
+    <p id="leftPlayer" > Player1: 3 </p>
+    <p id="gameName" >Game with two players</p>
+    <p id="rightPlayer" > Player2: 3 </p>
+
+    <canvas id="mycanvas" width="800" height="480"></canvas>
+
+    <div id="winner"></div>
+    <div >player1 control in the left paddle by click W for moveup and S to movedown and player2 control in the right paddle by click uparrow to moveup and downarrow to movedown</div>
+</div>
+</body>
+</html>
